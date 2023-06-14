@@ -1,25 +1,39 @@
-// rollup.config.js
+import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import babel from 'rollup-plugin-babel';
+import { terser } from 'rollup-plugin-terser';
 
 export default {
-  input: 'src/index.js', // entry point of your React Native app
-
-  output: {
-    file: 'bundle.js', // output file name
-    format: 'cjs', // commonjs format
-  },
-
+  input: 'src/index.js',
+  output: [
+    {
+      file: 'dist/index.js',
+      format: 'cjs',
+      exports: 'named',
+      sourcemap: true,
+    },
+    {
+      file: 'dist/index.mjs',
+      format: 'esm',
+      exports: 'named',
+      sourcemap: true,
+    },
+  ],
+  external: [
+    'react',
+    'react-native',
+    // Add any other external dependencies here
+  ],
   plugins: [
-    resolve(),
-    commonjs({
-      include: 'node_modules/**',
+    resolve({
+      extensions: ['.js', '.jsx'],
     }),
     babel({
-      presets: ['@babel/preset-env', '@babel/preset-react'],
-      babelrc: false,
+      exclude: 'node_modules/**',
+      presets: ['@babel/preset-react'], // Add this line
+      babelrc: false, // Add this line
     }),
+    commonjs(),
+    terser(),
   ],
-  external: ['react-native'],
 };
