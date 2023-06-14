@@ -1,4 +1,5 @@
-export * from './components';
+import { Button } from "react-native";
 
-
-// npm install --save-dev rollup rollup-plugin-commonjs rollup-plugin-node-resolve rollup-plugin-babel
+export const SampleButton = () => {
+    return <Button title="Sample"/>;
+};
