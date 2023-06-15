@@ -6,8 +6,8 @@ export default {
   input: 'src/index.js', // Entry point of your library
   output: {
     file: 'dist/bundle.js', // Output file
-    format: 'cjs', // CommonJS module format for React Native
-    exports: 'named',
+    // format: 'cjs', // CommonJS module format for React Native
+    // exports: 'named',
   },
   external: ['react', 'react-native'], // Exclude React and React Native from the bundle
   plugins: [

@@ -1,7 +1,11 @@
-import { Button } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 
 const SampleButton = () => {
-  return <Button title="Sample"/>;
+  return (
+    <TouchableOpacity>
+      <Text>SampleButton</Text>
+    </TouchableOpacity>
+  );
 };
 
 export default SampleButton;
