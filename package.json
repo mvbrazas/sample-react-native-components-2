@@ -3,13 +3,12 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/mvbrazas"
   },
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "scripts": {
     "rollup": "rollup -c"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/bundle.js",
   "files": [
     "dist"
   ],
