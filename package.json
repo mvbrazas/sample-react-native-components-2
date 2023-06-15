@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/mvbrazas"
   },
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "scripts": {
     "rollup": "rollup -c"
@@ -16,13 +16,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
     "react": "^18.2.0",
-    "react-native": "^0.71.10",
+    "react-native": "^0.71.11",
     "rollup": "^2.79.1",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-node-resolve": "^5.2.0"
   }
 }
